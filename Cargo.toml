@@ -1,0 +1,16 @@
+[package]
+name = "arduino-due-led-blink"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+cortex-m = { version = "0.7.6", features = ["critical-section-single-core"] }
+atsam3x8e-wrap = { git = "https://github.com/FedericoSerini/atsam3x8e-wrap", features = ["rt", "critical-section"] }
+panic-halt = "0.2.0"
+cortex-m-rt = "0.6.13"
+
+[[bin]]
+name = "arduino-due-led-blink"
+test = false
+bench = false
